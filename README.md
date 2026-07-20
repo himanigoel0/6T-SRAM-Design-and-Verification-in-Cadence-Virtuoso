@@ -4,7 +4,7 @@
 ![Technology](https://img.shields.io/badge/Process-180nm%20CMOS-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=for-the-badge)
 
-## 📌 Abstract / Overview
+## Abstract / Overview
 This repository contains the end-to-end design, layout, mathematical derivation, and characterization of a **6-Transistor (6T) SRAM Cell** operating at **$V_{DD} = 1.8\text{ V}$**. 
 
 The project includes:
@@ -16,11 +16,11 @@ The project includes:
 
 ---
 
-## 📐 1. Circuit Design & Physical Layout
+## 1. Circuit Design & Physical Layout
 
 The memory sub-system consists of a standard 6T SRAM cell optimized for balanced Read/Write stability, accompanied by peripheral precharge logic and a voltage-based Sense Amplifier for fast read operations.
 
-### 🖼️ Circuit Schematics
+### Circuit Schematics
 > **6T SRAM Cell Schematic**  
 > ![6T SRAM Schematic](./images/6T_sram_schematic.jpeg)  
 > *Figure 1.1: 6T SRAM Cell Schematic in Cadence Virtuoso.*
@@ -38,15 +38,15 @@ The memory sub-system consists of a standard 6T SRAM cell optimized for balanced
 
 ---
 
-### 🎨 Physical Layout Design
-The layout was drawn adhering to 180nm design rules (DRC clean) and verified using Layout vs. Schematic (LVS).
+### Physical Layout Design
+The layout was drawn adhering to 180nm design rules.
 
 > ![SRAM Layout](./images/layout_sram_6t.jpeg)  
-> *Figure 1.4: DRC & LVS Verified 6T SRAM Layout.*
+> *Figure 1.4: 6T SRAM Layout.*
 
 ---
 
-## 🧮 2. Theoretical Derivations: Cell Ratio (CR) & Pull-Up Ratio (PR)
+## 2. Theoretical Derivations: Cell Ratio (CR) & Pull-Up Ratio (PR)
 
 To guarantee **Read Stability** (preventing unintentional flips) and **Write Ability** (forcing a bit-flip during write), the transistor sizing constraints are analytically derived using KCL and MOSFET current equations ($I_{DS}$).
 
