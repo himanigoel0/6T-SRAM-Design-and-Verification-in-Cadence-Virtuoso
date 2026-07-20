@@ -1,4 +1,4 @@
-# 6T SRAM Cell Design, SNM Optimization & Layout Analysis
+# 6T SRAM Cell Design, SNM Characterization & Layout Analysis
 
 ![Cadence Virtuoso](https://img.shields.io/badge/EDA-Cadence%20Virtuoso-blue?style=for-the-badge)
 ![Technology](https://img.shields.io/badge/Process-180nm%20CMOS-green?style=for-the-badge)
@@ -9,7 +9,7 @@ This repository contains the end-to-end design, layout, mathematical derivation,
 
 The project includes:
 - Complete schematic implementation of the **6T SRAM Cell**, **Precharge Circuit**, and **Sense Amplifier**.
-- DRC/LVS clean physical layout design.
+- Physical layout design.
 - Rigorous mathematical modeling for **Cell Ratio (CR)** and **Pull-up Ratio (PR)**.
 - **Static Noise Margin (SNM)** extraction using custom Python scripts for maximum embedded square fit on Butterfly Curves.
 - Sensitivity analysis across **Voltage and Temperature** variations.
@@ -96,7 +96,7 @@ Static Noise Margin is analyzed using DC voltage sweep simulations to generate *
 
 ---
 
-# 4. Final Optimized Transistor Sizing
+# 4. Final Transistor Sizing Based on Stability Analysis
 
 Based on the read and write stability characterization, the following transistor dimensions were selected:
 
@@ -120,15 +120,15 @@ The selected sizing provides a design point with strong read stability while mai
 
 > **Writing a 0 to the SRAM cell:** 
 > ![Write0_opern](./images/write0.jpeg)  
-> *Figure 5.1 (a): Write 0 operation. During the Write ‘0’ operation, the complementary bitlines are driven to the required logic levels (Here, since we are writing a logic 0, we give BL = 0 and BLB = logic '1') and the wordline is asserted to enable the access transistors. The low bitline forces the corresponding internal storage node toward ground, causing the cross-coupled inverters to switch and successfully store logic ‘0’.*
+> *Figure 5.1 (a): Write 0 operation. During the Write ‘0’ operation, the complementary bitlines are driven to the required logic levels (Here, since we are writing a logic 0, we give BL = 0 V and BLB = VDD) and the wordline is asserted to enable the access transistors. The low bitline forces the corresponding internal storage node toward ground, causing the cross-coupled inverters to switch and successfully store logic ‘0’.*
 
 > **Writing a 1 to the SRAM cell:**  
 > ![Write1_opern](./images/write1.jpeg)  
-> *Figure 5.1 (b): Write 1 operation. During the Write ‘1’ operation, the bitline values are reversed (Hence, BL = 1 and BLB = 0) and the wordline is asserted to connect the storage nodes to the bitlines. The cell state switches accordingly and remains latched after the wordline is deasserted, confirming successful storage of logic ‘1’.*
+> *Figure 5.1 (b): Write 1 operation. During the Write ‘1’ operation, the bitline values are reversed (Hence, BL = VDD and BLB = 0 V) and the wordline is asserted to connect the storage nodes to the bitlines. The cell state switches accordingly and remains latched after the wordline is deasserted, confirming successful storage of logic ‘1’.*
 
 >  **Reading the SRAM cell:**
 > ![Read_opern](./images/read0_sense_amp.jpeg)  
-> *Figure 5.2: Read operation. During the Read operation, the bitlines are initially precharged and the wordline is asserted to connect the SRAM cell to the bitline pair. Depending on the stored data, a differential voltage develops between (BL) and (BLB), which is detected and amplified by the sense amplifier to recover the stored logic value without altering the cell state. Eventually, Q gets the value which is stored in the cell, which we are reading, and Qbar gets the opposite value.*
+> *Figure 5.2: Read operation. During the Read operation, the bitlines are initially precharged and the wordline is asserted, connecting the internal storage nodes to the bitline pair through the access transistors. Depending on the data already stored at (Q) and (Qbar), a small differential voltage develops between (BL) and (BLB). The sense amplifier detects and amplifies this differential to obtain the corresponding logic output while preserving the stored state of the SRAM cell.*
 
 ## 6. Voltage - Temperature Sensitivity Analysis
 
@@ -139,11 +139,11 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 
 > **Temperature Variation Analysis**  
 > ![Temperature Variation](./images/temp_variation.jpeg)  
-> *Figure 6.1: RSNM vs Temperature sweep. As temperature increases, the extracted SNM decreases, indicating reduced cell stability at higher temperatures. This behavior is primarily associated with temperature-dependent changes in MOSFET parameters such as carrier mobility and threshold voltage, which alter the strength balance of the cross-coupled inverters and reduce their noise tolerance.*
+> *Figure 6.1: Effect of temperature variation on SNM. As temperature increases, the Static Noise Margin generally decreases, indicating reduced SRAM cell stability at higher temperatures. Temperature-dependent variations in carrier mobility, threshold voltage, and transistor drive strength modify the voltage-transfer characteristics of the cross-coupled inverters, reducing the cell’s tolerance to noise and disturbances.*
 
 > **Supply Voltage ($V_{DD}$) Variation Analysis**  
 > ![Voltage Variation](./images/voltage_variation.jpeg)  
-> *Figure 6.2: SNM degradation at lower VDD levels.*
+> *Figure 6.2: Effect of supply voltage variation on SNM. As the supply voltage ((V_{DD})) increases, the Static Noise Margin increases, indicating improved SRAM cell stability. A higher supply voltage provides greater voltage headroom and stronger regenerative action in the cross-coupled inverters, increasing the cell’s tolerance to noise. Conversely, at lower (V_{DD}), reduced transistor drive strength and smaller voltage margins make the stored state more susceptible to disturbances, resulting in lower SNM.*
 
 ---
 
@@ -154,8 +154,9 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 | **Technology Node** | 180nm CMOS | Cadence Virtuoso / TS018/SCL 180 nm PDK|
 | **Supply Voltage ($V_{DD}$)** | $1.8\text{ V}$ | Nominal |
 | **Cell Ratio ($CR$) Sweep** | $1.0 \rightarrow 3.0$ | $RSNM$ increases from **$208.7\text{ mV} \rightarrow 370.7\text{ mV}$** |
-| **Pull-Up Ratio ($PR$) Sweep**| $0.52 \rightarrow 1.43$ | Lower $PR$ ensures write capability |
-| **Temperature Range** | $-40^\circ\text{C}$ to $125^\circ\text{C}$ | Verified stability across limits |
+| **Pull-Up Ratio ($PR$) Sweep**| $0.52 \rightarrow 1.43$ | Evaluated impact of pull-up strength on write stabilityy |
+| **Temperature Range** | $-40^\circ\text{C}$ to $125^\circ\text{C}$ | Characterized SNM stability across temperature range |
+| **Supply Voltage Sweep** | 1.2 V → 2.0 V | Characterized SNM dependence on supply voltage |
 
 ---
 
