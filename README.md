@@ -33,7 +33,7 @@ The memory sub-system consists of a standard 6T SRAM cell optimized for balanced
 > *Figure 1.2(a): Voltage Sense Amplifier.*
 
 > **Complete SRAM Schematic**
-> ![Sense Amp](./images/complete_sram_schematic.jpeg)  
+> ![Sense Amp](./images/complete_sram_cell.jpeg)  
 > *Figure 1.3: Complete SRAM schematic with basic 6T cell, sense amplifier and precharge circuit.*
 
 ---
