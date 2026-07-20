@@ -119,7 +119,6 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 | **Cell Ratio ($CR$) Sweep** | $1.0 \rightarrow 3.0$ | $RSNM$ increases from **$208.7\text{ mV} \rightarrow 370.7\text{ mV}$** |
 | **Pull-Up Ratio ($PR$) Sweep**| $0.52 \rightarrow 1.43$ | Lower $PR$ ensures write capability |
 | **Temperature Range** | $-40^\circ\text{C}$ to $125^\circ\text{C}$ | Verified stability across limits |
-| **Layout Area Verification** | DRC & LVS Clean | Zero errors |
 
 ---
 
