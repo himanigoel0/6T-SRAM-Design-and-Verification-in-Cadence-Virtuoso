@@ -59,13 +59,13 @@ To guarantee **Read Stability** (preventing unintentional flips) and **Write Abi
    - ![Final PR result](./images/pr_final_result.png)
    - Derived by ensuring the Access Transistor ($A_1$) can overdrive the Pull-Up PMOS ($P_1$) ($I_{A1} = I_{P1}$).
 
-📄 **For Complete Step-by-Step Derivations:**  
+ **For Complete Step-by-Step Derivations:**  
    - **[Full Mathematical Derivation Report for cell ratio (CR) ](read_stability_cell_ratio_derivation.pdf)**
    - **[Full Mathematical Derivation Report for pull-up ratio (PR) ](write_stability_pull_up_ratio_derivation.pdf)**
 
 ---
 
-## 📈 3. Static Noise Margin (SNM) Analysis
+## 3. Static Noise Margin (SNM) Analysis
 
 Static Noise Margin is analyzed using DC voltage sweep simulations to generate **Butterfly Curves**. A dedicated Python script finds the maximum embedded square for exact RSNM and WSNM values.
 
@@ -88,7 +88,7 @@ Static Noise Margin is analyzed using DC voltage sweep simulations to generate *
 > ![CR vs RSNM variation](./images/rsnm_vs_cr.png)  
 > *Figure 3.2: Effect of CR sweep on RSNM.*
 >
-> > ![PR vs WSNM variation](./images/wsnm_vs_pr.png)  
+> ![PR vs WSNM variation](./images/wsnm_vs_pr.png)  
 > *Figure 3.2: Effect of PR sweep on WSNM.*
 
 📄 **For Detailed SNM Plots report (depicting cr and pr variations):**  
