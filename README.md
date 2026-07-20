@@ -139,7 +139,7 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 
 > **Temperature Variation Analysis**  
 > ![Temperature Variation](./images/temp_variation.jpeg)  
-> *Figure 4.1: RSNM vs Temperature sweep.*
+> *Figure 4.1: RSNM vs Temperature sweep. As temperature increases, the extracted SNM decreases, indicating reduced cell stability at higher temperatures. This behavior is primarily associated with temperature-dependent changes in MOSFET parameters such as carrier mobility and threshold voltage, which alter the strength balance of the cross-coupled inverters and reduce their noise tolerance.*
 
 > **Supply Voltage ($V_{DD}$) Variation Analysis**  
 > ![Voltage Variation](./images/voltage_variation.jpeg)  
