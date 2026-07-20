@@ -23,7 +23,7 @@ The memory sub-system consists of a standard 6T SRAM cell optimized for balanced
 ### 🖼️ Circuit Schematics
 > **6T SRAM Cell Schematic**  
 > ![6T SRAM Schematic](./images/6T_sram_schematic.jpeg)  
-> *Figure 1.1: Complete 6T SRAM Cell Schematic in Cadence Virtuoso.*
+> *Figure 1.1: 6T SRAM Cell Schematic in Cadence Virtuoso.*
 
 > **Peripheral Circuits (Precharge & Sense Amplifier)**  
 > ![Precharge](./images/precharge_circuit.jpeg)  
