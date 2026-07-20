@@ -22,7 +22,7 @@ The memory sub-system consists of a standard 6T SRAM cell optimized for balanced
 
 ### 🖼️ Circuit Schematics
 > **6T SRAM Cell Schematic**  
-> ![6T SRAM Schematic](./images/6T_sram_schematic.png)  
+> ![6T SRAM Schematic](./images/6T_sram_schematic.jpeg)  
 > *Figure 1.1: Complete 6T SRAM Cell Schematic in Cadence Virtuoso.*
 
 > **Peripheral Circuits (Precharge & Sense Amplifier)**  
@@ -32,13 +32,17 @@ The memory sub-system consists of a standard 6T SRAM cell optimized for balanced
 >  ![Sense Amp](./images/sense_amplifier.jpeg)  
 > *Figure 1.2(a): Voltage Sense Amplifier.*
 
+> **Complete SRAM Schematic**
+> ![Sense Amp](./images/sense_amplifier.jpeg)  
+> *Figure 1.3: Complete SRAM schematic with basic 6T cell, sense amplifier and precharge circuit.*
+
 ---
 
 ### 🎨 Physical Layout Design
 The layout was drawn adhering to 180nm design rules (DRC clean) and verified using Layout vs. Schematic (LVS).
 
 > ![SRAM Layout](./images/layout_sram_6t.jpeg)  
-> *Figure 1.3: DRC & LVS Verified 6T SRAM Layout.*
+> *Figure 1.4: DRC & LVS Verified 6T SRAM Layout.*
 
 ---
 
