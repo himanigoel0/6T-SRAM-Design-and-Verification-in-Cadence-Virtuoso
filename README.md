@@ -88,12 +88,12 @@ Static Noise Margin is analyzed using DC voltage sweep simulations to generate *
 > ![CR and PR Sweeps](./images/cr_pr_sweeps.png)  
 > *Figure 3.2: Effect of CR sweep on RSNM and PR sweep on WSNM.*
 
-📄 **For Detailed SNM Plots & Python Extraction Code:**  
-👉 **[View SNM Analysis Report (PDF)](./reports/SNM_Analysis_Report.pdf)**
+📄 **For Detailed SNM Plots report (depicting cr and pr variations):**  
+   - **[SNM Analysis Report (PDF)](snm_analysis.pdf)**
 
 ---
 
-# 7. Final Optimized Transistor Sizing
+# 4. Final Optimized Transistor Sizing
 
 Based on the read and write stability characterization, the following transistor dimensions were selected:
 
@@ -113,7 +113,7 @@ The selected sizing provides a design point with strong read stability while mai
 
 ---
 
-## 🌡️ 4. PVT Sensitivity Analysis
+## 5. Voltage - Temperature Sensitivity Analysis
 
 The stability of the SRAM cell was tested under environmental and supply fluctuations:
 
