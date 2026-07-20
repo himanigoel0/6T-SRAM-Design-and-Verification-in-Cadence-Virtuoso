@@ -60,8 +60,8 @@ To guarantee **Read Stability** (preventing unintentional flips) and **Write Abi
    - Derived by ensuring the Access Transistor ($A_1$) can overdrive the Pull-Up PMOS ($P_1$) ($I_{A1} = I_{P1}$).
 
 📄 **For Complete Step-by-Step Derivations:**  
-   - **[Full Mathematical Derivation Report for cell ratio (CR): ](read_stability_cell_ratio_derivation.pdf)**
-   - **[Full Mathematical Derivation Report for pull-up ratio (PR): ](write_stability_pull_up_ratio_derivation.pdf)**
+   - **[Full Mathematical Derivation Report for cell ratio (CR) ](read_stability_cell_ratio_derivation.pdf)**
+   - **[Full Mathematical Derivation Report for pull-up ratio (PR) ](write_stability_pull_up_ratio_derivation.pdf)**
 
 ---
 
