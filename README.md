@@ -60,18 +60,21 @@ To guarantee **Read Stability** (preventing unintentional flips) and **Write Abi
    - Derived by ensuring the Access Transistor ($A_1$) can overdrive the Pull-Up PMOS ($P_1$) ($I_{A1} = I_{P1}$).
 
 📄 **For Complete Step-by-Step Derivations:**  
-👉 **[Full Mathematical Derivation Report for cell ratio (CR): ](read_stability_cell_ratio_derivation.pdf)**
-👉 **[Full Mathematical Derivation Report for pull-up ratio (PR): ](write_stability_pull_up_ratio_derivation.pdf)**
+   - **[Full Mathematical Derivation Report for cell ratio (CR): ](read_stability_cell_ratio_derivation.pdf)**
+   - **[Full Mathematical Derivation Report for pull-up ratio (PR): ](write_stability_pull_up_ratio_derivation.pdf)**
 
 ---
 
 ## 📈 3. Static Noise Margin (SNM) Analysis
 
-Static Noise Margin is analyzed using DC voltage sweep simulations to generate **Butterfly Curves**. A dedicated Python script rotates the VTC curves by $45^\circ$ to find the maximum embedded square for exact RSNM and WSNM values.
+Static Noise Margin is analyzed using DC voltage sweep simulations to generate **Butterfly Curves**. A dedicated Python script finds the maximum embedded square for exact RSNM and WSNM values.
 
 ### Butterfly Curves & Python SNM Extraction
-> ![Butterfly Curve & SNM Fit](./images/butterfly_curve_snm.png)  
+> ![Butterfly Curve & SNM Fit](./images/butterfly_curve.png)  
 > *Figure 3.1: Python-extracted Maximum Embedded Square inside the Butterfly Curve.*
+>
+> ![WSNM curve & SNM Fit](./images/wsnm_curve.png)  
+> *Figure 3.2: Python-extracted Maximum Embedded Square inside the WSNM Curve.*
 
 ---
 
