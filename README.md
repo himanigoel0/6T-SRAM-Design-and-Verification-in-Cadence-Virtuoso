@@ -52,11 +52,11 @@ To guarantee **Read Stability** (preventing unintentional flips) and **Write Abi
 
 ### Summary Results & Governing Equations:
 1. **Read Stability Constraint (Cell Ratio - CR):**
-   ![Final CR result](./images/cr_final_result.png)
+   -  ![Final CR result](./images/cr_final_result.png)
    - Derived by balancing Access Transistor ($A_1$) and Drive Transistor ($N_1$) currents in linear/saturation regions ($I_{A1} = I_{N1}$).
 
 2. **Write Stability Constraint (Pull-Up Ratio - PR):**
-   ![Final PR result](./images/pr_final_result.png)
+   - ![Final PR result](./images/pr_final_result.png)
    - Derived by ensuring the Access Transistor ($A_1$) can overdrive the Pull-Up PMOS ($P_1$) ($I_{A1} = I_{P1}$).
 
 📄 **For Complete Step-by-Step Derivations:**  
