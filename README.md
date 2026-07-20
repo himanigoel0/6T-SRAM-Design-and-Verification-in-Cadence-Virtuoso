@@ -154,7 +154,7 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 | **Technology Node** | 180nm CMOS | Cadence Virtuoso / TS018/SCL 180 nm PDK|
 | **Supply Voltage ($V_{DD}$)** | $1.8\text{ V}$ | Nominal |
 | **Cell Ratio ($CR$) Sweep** | $1.0 \rightarrow 3.0$ | $RSNM$ increases from **$208.7\text{ mV} \rightarrow 370.7\text{ mV}$** |
-| **Pull-Up Ratio ($PR$) Sweep**| $0.52 \rightarrow 1.43$ | Evaluated impact of pull-up strength on write stabilityy |
+| **Pull-Up Ratio ($PR$) Sweep**| $0.52 \rightarrow 1.43$ | Evaluated impact of pull-up strength on write stability |
 | **Temperature Range** | $-40^\circ\text{C}$ to $125^\circ\text{C}$ | Characterized SNM stability across temperature range |
 | **Supply Voltage Sweep** | 1.2 V → 2.0 V | Characterized SNM dependence on supply voltage |
 
@@ -174,9 +174,10 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 ---
 ## 10. Conclusion
 
-A complete 6T SRAM cell was designed and characterized in Cadence Virtuoso using 180 nm CMOS technology at a nominal supply voltage of (1.8,\text{V}). The project combined transistor-level circuit design, analytical sizing, physical layout, functional verification, and stability characterization to study the major design trade-offs involved in SRAM operation.
+A complete 6T SRAM cell was designed and characterized in Cadence Virtuoso using 180 nm CMOS technology at a nominal supply voltage of $1.8\text{ V}$. The project combined transistor-level circuit design, analytical sizing, physical layout, functional verification, and stability characterization to study the major design trade-offs involved in SRAM operation.
 
-Read and write stability were investigated through Cell Ratio (CR) and Pull-Up Ratio (PR) analysis, supported by mathematical derivations and SNM extraction from simulated voltage-transfer characteristics. The CR sweep demonstrated an improvement in RSNM from approximately (208.7,\text{mV}) at (CR=1) to (370.7,\text{mV}) at (CR=3). Based on the overall characterization, transistor widths of (0.42,\mu\text{m}) for the access NMOS, (1.26,\mu\text{m}) for the pull-down NMOS, and (0.30,\mu\text{m}) for the pull-up PMOS were selected, corresponding to (CR=3) and (PR\approx0.71).
+Read and write stability were investigated through Cell Ratio (CR) and Pull-Up Ratio (PR) analysis, supported by mathematical derivations and SNM extraction from simulated voltage-transfer characteristics. The CR sweep demonstrated an improvement in RSNM from approximately $208.7\text{ mV}$ at $CR = 1$ to $370.7\text{ mV}$ at $CR = 3$. Based on the overall characterization, transistor widths of $0.42,\mu\text{m}$ for the access NMOS, $1.26,\mu\text{m}$ for the pull-down NMOS, and $0.30,\mu\text{m}$ for the pull-up PMOS were selected, corresponding to $CR = 3$ and $PR \approx 0.71$.
 
 Functional simulations verified Write ‘0’, Write ‘1’, and Read operations using the SRAM cell together with the precharge and sense-amplifier circuitry. Voltage and temperature sweeps were additionally performed to evaluate the sensitivity of cell stability to operating conditions. Overall, the project demonstrates an end-to-end SRAM design and characterization methodology, connecting analytical transistor sizing with circuit simulation, SNM-based stability evaluation, peripheral circuitry, and physical layout implementation.
+
 
