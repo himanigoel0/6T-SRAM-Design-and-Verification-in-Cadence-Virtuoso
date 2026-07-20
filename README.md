@@ -85,8 +85,11 @@ Static Noise Margin is analyzed using DC voltage sweep simulations to generate *
 * **Write SNM (WSNM) vs. Pull-Up Ratio (PR):** Swept $PR$ from $0.52 \rightarrow 1.43$. Lower $PR$ makes write operation significantly easier.
 
 > **CR & PR Sweeps Visualization**  
-> ![CR and PR Sweeps](./images/cr_pr_sweeps.png)  
-> *Figure 3.2: Effect of CR sweep on RSNM and PR sweep on WSNM.*
+> ![CR vs RSNM variation](./images/rsnm_vs_cr.png)  
+> *Figure 3.2: Effect of CR sweep on RSNM.*
+>
+> > ![PR vs WSNM variation](./images/wsnm_vs_pr.png)  
+> *Figure 3.2: Effect of PR sweep on WSNM.*
 
 📄 **For Detailed SNM Plots report (depicting cr and pr variations):**  
    - **[SNM Analysis Report (PDF)](snm_analysis.pdf)**
@@ -113,7 +116,21 @@ The selected sizing provides a design point with strong read stability while mai
 
 ---
 
-## 5. Voltage - Temperature Sensitivity Analysis
+## 5. Read and Write operation verification
+
+> **Writing a 0 to the SRAM cell:** 
+> ![Write0_opern](./images/write0.jpeg)  
+> *Figure 5.1 (a): Write 0 operation.*
+
+> **Writing a 1 to the SRAM cell:**  
+> ![Write1_opern](./images/write1.jpeg)  
+> *Figure 5.1 (b): Write 1 operation.*
+
+>  **Reading the SRAM cell:**
+> ![Read_opern](./images/read0_sense_amp.jpeg)  
+> *Figure 5.2: Read operation.*
+
+## 6. Voltage - Temperature Sensitivity Analysis
 
 The stability of the SRAM cell was tested under environmental and supply fluctuations:
 
@@ -130,7 +147,7 @@ The stability of the SRAM cell was tested under environmental and supply fluctua
 
 ---
 
-## 📊 5. Summary of Results
+## 7. Summary of Results
 
 | Parameter | Condition / Value | Remarks |
 | :--- | :--- | :--- |
