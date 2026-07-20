@@ -12,7 +12,7 @@ The project includes:
 - DRC/LVS clean physical layout design.
 - Rigorous mathematical modeling for **Cell Ratio (CR)** and **Pull-up Ratio (PR)**.
 - **Static Noise Margin (SNM)** extraction using custom Python scripts for maximum embedded square fit on Butterfly Curves.
-- Sensitivity analysis across **PVT (Process, Voltage, Temperature)** variations.
+- Sensitivity analysis across **Voltage and Temperature** variations.
 
 ---
 
