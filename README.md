@@ -93,6 +93,26 @@ Static Noise Margin is analyzed using DC voltage sweep simulations to generate *
 
 ---
 
+# 7. Final Optimized Transistor Sizing
+
+Based on the read and write stability characterization, the following transistor dimensions were selected:
+
+| Transistor | Width |
+|---|---:|
+| Access NMOS | 0.42 µm |
+| Pull-Down NMOS | 1.26 µm |
+| Pull-Up PMOS | 0.30 µm |
+
+Corresponding sizing ratios:
+
+**Cell Ratio (CR) = 3**
+
+**Pull-Up Ratio (PR) ≈ 0.71**
+
+The selected sizing provides a design point with strong read stability while maintaining reliable write ability for the simulated operating conditions.
+
+---
+
 ## 🌡️ 4. PVT Sensitivity Analysis
 
 The stability of the SRAM cell was tested under environmental and supply fluctuations:
